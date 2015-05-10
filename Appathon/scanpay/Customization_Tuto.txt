@@ -1,0 +1,20 @@
+Please have a look at the header ScanPayViewController_Extras.h for detailed informations.
+
+Here is an example of customization :
+
+- (IBAction)scanTouched:(UIButton *)sender {
+    ScanPayViewController * scanPayViewController = [[ScanPayViewController alloc] initWithDelegate:self appToken:@“xXxXxXxXxXxXxXxXx”];
+    scanPayViewController.customLogo = [UIImage imageNamed:@"twitter.png"];
+    [scanPayViewController setSightColor:[UIColor colorWithRed:97 / 255.f green:170 / 255.f blue:219 / 255.f alpha:0.6f]];
+    [scanPayViewController setSightColorWhenCardIsInFrame:[UIColor colorWithRed:255.f green:255.f blue:0.f alpha:0.6f]];
+    scanPayViewController.topBottomBandColor = [UIColor colorWithRed:0 / 255.f green:176 / 255.f blue:232 / 255.f alpha:1.0f];
+    scanPayViewController.toolBarButtonColor = [UIColor colorWithRed:150 / 255.f green:176 / 255.f blue:232 / 255.f alpha:1.0f];
+    scanPayViewController.shouldDisplayFakeExampleCardInFrame = NO;
+    scanPayViewController.shouldDisplayStatusBar = YES;
+    scanPayViewController.shouldDisplayStatusBarBeLight = YES;
+    scanPayViewController.fontName = @"TescoDisplayLt-Regular";
+    scanPayViewController.shouldDisplayTutorial = YES;
+    scanPayViewController.shouldDisplaySecuritySentence = YES;
+    scanPayViewController.shouldDisplayAcceptedCards = YES;
+    [self presentViewController:scanPayViewController animated:TRUE completion:nil];
+}
